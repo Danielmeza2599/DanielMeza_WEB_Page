@@ -118,6 +118,7 @@ img.profile-image {
 /* Contact Info */
 .contact-info{
     margin-top: 2rem 0;
+    
 }
 .contact-info p
 {
@@ -131,7 +132,7 @@ img.profile-image {
     font-size: 0.9rem;
 }
 .contact-info a{
-    display: list-item;
+    display: flex;
     color: #ecf0f1;
     text-decoration: none;
     transition: color 0.3s;
@@ -139,11 +140,11 @@ img.profile-image {
     align-items: center;
     align-self: center;
     justify-content: center;
+    position: relative;
     gap: 0.8rem;
     margin: 0.8rem 0;
     font-size: 0.6rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
 }
 
 .sidebar.menu {
