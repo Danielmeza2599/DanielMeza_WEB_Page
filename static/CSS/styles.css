@@ -18,7 +18,7 @@ body {
         "header header"
         "sidebar content"
         "footer footer";
-    grid-template-columns: 270px 1fr;
+    grid-template-columns: 335px 1fr;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
@@ -72,7 +72,7 @@ header {
 
 .title {
     color: #f7f7f7;
-    font-size: 1.1em;
+    font-size: 1em;
     margin-bottom: 10px;
     text-align: center;
     margin-bottom: 1rem;
@@ -100,12 +100,13 @@ img.profile-image {
     height: 180px;
     border-radius: 10%;
     border: solid rgb(104, 125, 182);
-    margin-left: 2.4rem;
+    margin-left: 4rem;
     align-items: center;
     align-self: center;
     align-content: center;
 }
 
+/* About Me Subtitle */
 .sidebar h2 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
@@ -114,6 +115,36 @@ img.profile-image {
     text-align: center;
 }
 
+/* Contact Info */
+.contact-info{
+    margin-top: 2rem 0;
+}
+.contact-info p
+{
+    display: list-item;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0.8rem 0;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+}
+.contact-info a{
+    display: list-item;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 0.8rem 0;
+    font-size: 0.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
 
 .sidebar.menu {
   list-style-type: none;
