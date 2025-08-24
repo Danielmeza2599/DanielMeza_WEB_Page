@@ -85,16 +85,7 @@ header {
     margin-top: 1rem;
 }
 
-/* About me section - Increased font size */
-#about p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
-    text-align: justify;
-    padding: 1em;
-}
-
+/* Profile Image */
 img.profile-image {
     width: 160px;
     height: 180px;
@@ -131,7 +122,7 @@ img.profile-image {
 }
 .contact-info i {
     margin-right: 8px;
-    color: #2a7ae2;
+    color: #3d7cce;
     font-size: 1.1em;
 }
 .contact-info .email-link {
@@ -166,6 +157,45 @@ img.profile-image {
     background-color: #2c3e50;
 }
 
+
+/* Social List Links */
+.social-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 4px;
+  padding-left: 7px;
+}
+
+.social-item .social-link {
+  color: #adb0b3;
+  font-size: 18px;
+}
+
+.social-item .social-link:hover { color: #adb0b3; }
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #2a7ae2;
+    font-size: 1.6em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
 
 /* Estilos para el Content */
 .content {
