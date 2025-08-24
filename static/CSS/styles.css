@@ -124,6 +124,7 @@ img.profile-image {
 {
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 1em;
     color: #fff;
     margin: 8px 0;
