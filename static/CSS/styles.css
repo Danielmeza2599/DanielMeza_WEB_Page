@@ -270,6 +270,7 @@ img.profile-image {
     justify-content: center;
     padding: 10px;
     margin-left: 60px;
+    margin-top: -20px;
 }
 
 .carrusel {
@@ -404,6 +405,7 @@ img.profile-image {
  @media (max-width: 768px) {
             .carrusel {
                 height: 350px;
+                width: auto;
             }
         }
 
@@ -411,15 +413,13 @@ img.profile-image {
             .carrusel {
                 height: 250px;
                 margin-left: 10px;
+                width: auto;
             }
             
-            /*
+            
             .control-btn {
                 padding: 10px 15px;
                 font-size: 14px;
             }
             
-            h1 {
-                font-size: 1.8rem;
-            }*/
         }
