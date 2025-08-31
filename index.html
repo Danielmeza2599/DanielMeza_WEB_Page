@@ -27,9 +27,9 @@
             <nav class="nav">
                 <ul>
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="#experience">Work Experience</a></li>
-                    <li><a href="#Education">Academic Formation</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="./index.html">Work Experience</a></li>
+                    <li><a href="./index.html">Academic Formation</a></li>
+                    <li><a href="./index.html">Skills</a></li>
                 </ul>
             </nav>
         </header>
@@ -89,6 +89,9 @@
         </aside>
 
         <main class="content">
+            <!-- 
+                - Carusel Photos
+            -->
             <div class ="container-content">
                 <div class="carrusel">
                     <div class="carrusel-container">
@@ -108,9 +111,20 @@
                         </div>
                     </div>
                 </div>
-            </div>  
-                
-                
+                <!-- 
+                    - Carusel Controls
+                -->
+                <div class="carrusel-controls">
+                    <button class="control-btn prev-btn">Before</button>
+                    <button class="control-btn next-btn">Next</button>
+                </div>
+            
+                <div class="indicadores">
+                    <div class="indicador activo" data-index="0"></div>
+                    <div class="indicador" data-index="1"></div>
+                </div>
+            
+            </div>       
         </main>
 
         <footer class="footer">
@@ -123,8 +137,10 @@
                 </ul>
             </div>
         </footer>
-
-
     </div>
+    <!--
+        - script js link
+    -->
+    <script src="./static/js/script.js"></script>
 </body>
 </html>

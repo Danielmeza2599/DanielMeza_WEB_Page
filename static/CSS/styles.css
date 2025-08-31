@@ -192,17 +192,22 @@ img.profile-image {
     padding-top: 0.5rem;
 }
 
+.sidebar-widget h3 {
+    padding-left: 10px;
+}
+
 .sidebar-widget p {
     margin-top: 0.5rem;
     text-align: justify;
     font-size: 0.9em;
     line-height: 1.4;
     color: #d1d5d9;
+    padding-left: 10px;
 }
 
 .sidebar-widget .languages-list {
     list-style: none;
-    padding-left: 0;
+    padding-left: 10px;
     border-bottom: 2px solid #adb0b3;
 }
 
@@ -220,6 +225,7 @@ img.profile-image {
   gap: 15px;
   padding-bottom: 4px;
   padding-left: 7px;
+  margin-bottom: 1px;
 }
 
 .social-item .social-link {
@@ -234,7 +240,7 @@ img.profile-image {
     align-items: center;
     justify-content: space-around;
     gap: 1px;
-    margin-top: 10px;
+    margin-top: 1px;
 }
 
 .social-links a {
@@ -295,14 +301,98 @@ img.profile-image {
 }
 
 .slide-text {
-    position: bottom: 0;
+    position: bottom 0;
     bottom: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 15px;
     text-align: center;
-}   
+}
+
+/* Carrusel Controls */
+.carrusel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.control-btn {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn:hover {
+    background: #042b46;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.control-btn:active {
+    transform: translateY(0);
+}
+
+.indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.indicador {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #bdc3c7;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.indicador.activo {
+    background: #3498db;
+    transform: scale(1.2);
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #3498db;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+
 
 /* Estilos para el Footer */
 .footer {
@@ -350,6 +440,7 @@ img.profile-image {
         @media (max-width: 480px) {
             .carrusel {
                 height: 250px;
+                margin-left: 10px;
             }
             
             /*
