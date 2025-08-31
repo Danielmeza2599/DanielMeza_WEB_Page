@@ -40,6 +40,7 @@ header {
     color: white;
     font-style: normal;
     cursor: blink; /* ERROR: Al hacer click en el H1 aparece una imagen */
+    margin-left: 1rem;
 }
 
 .nav ul{
@@ -413,8 +414,9 @@ img.profile-image {
         @media (max-width: 480px) {
             .carrusel {
                 height: 250px;
-                margin-left: 10px;
+                margin-left: -20px;
                 width: auto;
+                margin-top: -30px;
             }
             
             

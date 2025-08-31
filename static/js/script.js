@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Variables de estado
             let currentSlide = 0;
-            let isAutoPlay = true;
+            let isAutoPlay = true; // Cambiado a true para iniciar con autoplay activado
             let autoPlayInterval;
             
             // Función para cambiar de slide
