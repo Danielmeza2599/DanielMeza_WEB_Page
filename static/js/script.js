@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (isAutoPlay) {
                     autoPlayInterval = setInterval(() => {
                         goToSlide(currentSlide + 1);
-                    }, 4000);
+                    }, 3000);
                 }
             }
             
@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (isAutoPlay) {
                     startAutoPlay();
                 }
+                else {startAutoPlay();}
             }
             
             // Control de reproducción automática
@@ -79,7 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (isAutoPlay) {
                     startAutoPlay();
                 } else {
-                    stopAutoPlay();
+                    //stopAutoPlay();
+                    startAutoPlay();
                 }
             });
             
