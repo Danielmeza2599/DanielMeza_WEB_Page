@@ -338,3 +338,27 @@ img.profile-image {
 .footer-links a:hover {
     color: #3498db;
 }
+
+
+/* Media Queries para Responsividad */
+ @media (max-width: 768px) {
+            .carrusel {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carrusel {
+                height: 250px;
+            }
+            
+            /*
+            .control-btn {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }*/
+        }
