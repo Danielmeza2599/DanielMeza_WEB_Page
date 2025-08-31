@@ -275,7 +275,7 @@ img.profile-image {
 .carrusel {
     position: relative;
     height: auto; /* Ajusta la altura según el contenido */
-    width: auto;
+    width: 500px; /* Ajusta el ancho según el diseño */
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -356,41 +356,11 @@ img.profile-image {
 }
 
 .indicador.activo {
-    background: #3498db;
+    background: #062f4b;
     transform: scale(1.2);
 }
 
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
-}
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 22px;
-    width: 22px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-}
-
-input:checked + .slider {
-    background-color: #3498db;
-}
-
-input:checked + .slider:before {
-    transform: translateX(30px);
-}
 
 
 
