@@ -4,6 +4,35 @@
 // Fecha: 30/08/2025
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Función para cargar secciones internas
+    window.loadSection = function(section) {
+        const mainContent = document.getElementById('main-content');
+        let file = '';
+        switch(section) {
+            case 'work_experience':
+                file = './static/pages/work_experience.html';
+                break;
+            case 'academic_information':
+                file = './static/pages/academic_information.html';
+                break;
+            case 'skills':
+                file = './static/pages/skills.html';
+                break;
+            case 'home':
+            default:
+                // Recarga el contenido inicial (se puede guardar el HTML inicial en una variable)
+                location.reload();
+                return;
+        }
+        fetch(file)
+            .then(response => response.text())
+            .then(html => {
+                mainContent.innerHTML = html;
+            })
+            .catch(err => {
+                mainContent.innerHTML = '<p>Error al cargar la sección.</p>';
+            });
+    }
             // Elementos del DOM
             const carruselContainer = document.querySelector('.carrusel-container');
             const slides = document.querySelectorAll('.slide');
