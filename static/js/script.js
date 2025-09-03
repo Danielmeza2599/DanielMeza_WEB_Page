@@ -1,4 +1,5 @@
 // script.js
+// Funciones para navegar entre secciones de la página web y mostrar en el contenido principal
 // Funciones para manejar el carrusel de fotos en la página web
 // Autor: Daniel Meza
 // Fecha: 30/08/2025
@@ -7,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para cargar secciones internas
     window.loadSection = function(section) {
         const mainContent = document.getElementById('main-content');
+        startAutoPlay();//No se esta iniciando el autoplay 
         let file = '';
         switch(section) {
             case 'work_experience':
@@ -20,8 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'home':
             default:
-                // Recarga el contenido inicial (se puede guardar el HTML inicial en una variable)
+                // Recarga el contenido inicial (se puede guardar el HTML inicial en una variable , tarea de mejora) )
                 location.reload();
+                startAutoPlay();
                 return;
         }
         fetch(file)
@@ -39,12 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const prevBtn = document.querySelector('.prev-btn');
             const nextBtn = document.querySelector('.next-btn');
             const indicadores = document.querySelectorAll('.indicador');
-            const toggleAutoPlay = document.querySelector('.auto-play-toggle input');
+            /*const toggleAutoPlay = document.querySelector('.auto-play-toggle input');*/
             
             // Variables de estado
             let currentSlide = 0;
             let isAutoPlay = true; // Cambiado a true para iniciar con autoplay activado
             let autoPlayInterval;
+            //let toggleAutoPlay = true;
             
             // Función para cambiar de slide
             function goToSlide(index) {
@@ -87,16 +91,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (isAutoPlay) {
                     autoPlayInterval = setInterval(() => {
                         goToSlide(currentSlide + 1);
-                    }, 3000);
+                    }, 4000);
                 }
             }
             
-            function stopAutoPlay() {
+            /*function stopAutoPlay() {
                 clearInterval(autoPlayInterval);
-            }
+            }*/
             
             function resetAutoPlay() {
-                stopAutoPlay();
+                //stopAutoPlay();
                 if (isAutoPlay) {
                     startAutoPlay();
                 }
@@ -104,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Control de reproducción automática
-            toggleAutoPlay.addEventListener('change', function() {
+            /*toggleAutoPlay.addEventListener('change', function() {
                 isAutoPlay = this.checked;
                 if (isAutoPlay) {
                     startAutoPlay();
@@ -112,12 +116,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     //stopAutoPlay();
                     startAutoPlay();
                 }
-            });
+            });*/
+
             
             // Iniciar reproducción automática al cargar la página
             startAutoPlay();
             
             // Navegación con teclado
+            /* NO esta funcionando. No detecta entrada del teclado */
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'ArrowLeft') {
                     goToSlide(currentSlide - 1);
