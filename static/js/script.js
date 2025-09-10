@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (isAutoPlay) {
                     autoPlayInterval = setInterval(() => {
                         goToSlide(currentSlide + 1);
-                    }, 4000);
+                    }, 5000);
                 }
             }
             
