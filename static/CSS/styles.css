@@ -558,3 +558,27 @@ img.profile-image {
             }
             
         }
+
+/* Responsive: sidebar collapses on small screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    min-width: 60px;
+    padding: 10px 0;
+  }
+  .sidebar .sidebar-text {
+    display: none;
+  }
+  .sidebar .sidebar-icon {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+}
