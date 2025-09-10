@@ -491,11 +491,45 @@ img.profile-image {
     margin-bottom: 20px;
 }
 
+/* Estilos para enlaces a Terminos y politica de privacidad*/
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
 
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
 
+.section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #eee;
+}
 
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
 
+.skill-category {
+    background: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.footer-links-extra {
+    margin-top: 1rem;
+}
+
+.footer-links-extra a {
+    color: var(--text-light);
+    margin: 0 1rem;
+    text-decoration: none;
+}
 
 
 
