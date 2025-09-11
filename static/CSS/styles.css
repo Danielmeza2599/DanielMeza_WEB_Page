@@ -535,42 +535,46 @@ img.profile-image {
 
 
 /* Media Queries para Responsividad */
- @media (max-width: 768px) {
-            .carrusel {
-                height: 250px;
-                width: auto;
-                margin-top: -30px;
-                margin-left: -200px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .carrusel {
-                height: 150px;
-                margin-left: -50px;
-                width: auto;
-                margin-top: -30px;
-            }
-        
-            
-        }
-
-/* Responsive: sidebar collapses on small screens */
 @media (max-width: 768px) {
-  .sidebar {
-    width: 150px;
-    min-width: 60px;
-    padding: 10px 0;
-  }
-  .sidebar .sidebar-text {
-    display: none;
-  }
-  .sidebar .sidebar-icon {
-    display: block;
-    margin: 0 auto;
-  }
+    .container {
+        /* Se cambia a un layout de una sola columna */
+        grid-template-areas:
+            "header"
+            "content"
+            "sidebar"
+            "footer";
+        /* La única columna tomará todo el ancho */
+        grid-template-columns: 1fr;
+    }
 
-  .profile-image {
-    visibility: hidden;
-  }
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav ul {
+        /* Se hace que la navegación sea más compacta si es necesario */
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .sidebar {
+        border-right: none; /* Se quita el borde derecho en vista móvil */
+        border-top: 2px solid #3f5c79; /* Se añade un separador arriba */
+    }
+
+    img.profile-image {
+        /* Se centra la imagen de perfil que ahora es visible */
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .container-content {
+        margin: 0;
+        padding: 15px;
+    }
+
+    .carrusel {
+        width: 100%; /* El carrusel ocupa todo el ancho disponible */
+    }
 }
