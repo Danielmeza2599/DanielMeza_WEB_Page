@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para cargar secciones internas
     window.loadSection = function(section) {
         const mainContent = document.getElementById('main-content');
-        startAutoPlay();//No se esta iniciando el autoplay 
         let file = '';
         switch(section) {
             case 'work_experience':
@@ -48,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
             let currentSlide = 0;
             let isAutoPlay = true; // Cambiado a true para iniciar con autoplay activado
             let autoPlayInterval;
-            //let toggleAutoPlay = true;
             
             // Función para cambiar de slide
             function goToSlide(index) {
@@ -82,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             indicadores.forEach(ind => {
                 ind.addEventListener('click', () => {
                     goToSlide(parseInt(ind.getAttribute('data-index')));
-                    resetAutoPlay();
+                    startAutoPlay();
                 });
             });
             
@@ -91,46 +89,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (isAutoPlay) {
                     autoPlayInterval = setInterval(() => {
                         goToSlide(currentSlide + 1);
-                    }, 5000);
+                    }, 6000);
                 }
             }
-            
-            /*function stopAutoPlay() {
-                clearInterval(autoPlayInterval);
-            }*/
-            
-            function resetAutoPlay() {
-                //stopAutoPlay();
-                if (isAutoPlay) {
-                    startAutoPlay();
-                }
-                else {startAutoPlay();}
-            }
-            
-            // Control de reproducción automática
-            /*toggleAutoPlay.addEventListener('change', function() {
-                isAutoPlay = this.checked;
-                if (isAutoPlay) {
-                    startAutoPlay();
-                } else {
-                    //stopAutoPlay();
-                    startAutoPlay();
-                }
-            });*/
-
             
             // Iniciar reproducción automática al cargar la página
             startAutoPlay();
             
             // Navegación con teclado
-            /* NO esta funcionando. No detecta entrada del teclado */
+            /* Funcionando */
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'ArrowLeft') {
                     goToSlide(currentSlide - 1);
-                    resetAutoPlay();
+                    startAutoPlay();
                 } else if (e.key === 'ArrowRight') {
                     goToSlide(currentSlide + 1);
-                    resetAutoPlay();
+                    startAutoPlay();
                 }
             });
         });
