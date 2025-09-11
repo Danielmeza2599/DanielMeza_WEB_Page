@@ -537,32 +537,28 @@ img.profile-image {
 /* Media Queries para Responsividad */
  @media (max-width: 768px) {
             .carrusel {
-                height: 350px;
+                height: 250px;
                 width: auto;
                 margin-top: -30px;
+                margin-left: -200px;
             }
         }
 
         @media (max-width: 480px) {
             .carrusel {
-                height: 250px;
-                margin-left: -20px;
+                height: 150px;
+                margin-left: -50px;
                 width: auto;
                 margin-top: -30px;
             }
-            
-            
-            .control-btn {
-                padding: 10px 15px;
-                font-size: 14px;
-            }
+        
             
         }
 
 /* Responsive: sidebar collapses on small screens */
 @media (max-width: 768px) {
   .sidebar {
-    width: 60px;
+    width: 150px;
     min-width: 60px;
     padding: 10px 0;
   }
@@ -575,10 +571,6 @@ img.profile-image {
   }
 
   .profile-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
+    visibility: hidden;
   }
 }
