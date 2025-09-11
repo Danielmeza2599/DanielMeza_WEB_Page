@@ -5,6 +5,17 @@
     box-sizing: border-box;
 }
 
+/* Estilos base */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --text-light: #fff;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -285,7 +296,7 @@ img.profile-image {
 }
 .carrusel-container {
     display: flex;
-    width: 400%; /* 2 slides de 25% cada uno */
+    /*El ancho se establece en JS*/
     height: 100%; /* Ajusta la altura según el contenido */
     transition: transform 0.5s ease-in-out;
 }
@@ -474,15 +485,32 @@ img.profile-image {
     color: #333;
 }
 
+.content-skills h3 {
+    text-align: center;
+    margin-left: 10px; 
+    color: var(--dark-color);
+}
+
+.content-skills h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    color: var(--text-color);
+}
+
 .skills {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
+    display: grid;
+
     padding-left: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .skill-category ul {
@@ -490,6 +518,14 @@ img.profile-image {
     margin-left: 20px;
     margin-bottom: 20px;
 }
+.skill-category { 
+    background: var(--light-color);
+    padding: 1.5rem;
+    border-radius: 8px solid #292929;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 30px;
+}
+
 
 /* Estilos para enlaces a Terminos y politica de privacidad*/
 .hero h1 {
@@ -514,12 +550,6 @@ img.profile-image {
     color: var(--primary-color);
 }
 
-.skill-category {
-    background: var(--light-color);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
 .footer-links-extra {
     margin-top: 1rem;
@@ -562,6 +592,11 @@ img.profile-image {
         border-top: 2px solid #3f5c79; /* Se añade un separador arriba */
     }
 
+    .sidebar-widget
+    {
+        margin-right: 1rem;
+    }
+
     img.profile-image {
         /* Se centra la imagen de perfil que ahora es visible */
         margin-left: auto;
@@ -575,6 +610,6 @@ img.profile-image {
     }
 
     .carrusel {
-        width: 100%; /* El carrusel ocupa todo el ancho disponible */
+        width: 100%; /* El carrusel ocupara todo el ancho disponible */
     }
 }
