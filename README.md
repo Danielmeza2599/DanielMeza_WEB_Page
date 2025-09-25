@@ -4,7 +4,7 @@
 
 <p align= "center">
   <a href="https://www.linkedin.com/in/daniel-meza-a5660622b/" target="_blank">
-    <img alt="LinkedIn" src="https://1000logos.net/linkedin-logo/" />
+    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
 
   ## Who I am?
