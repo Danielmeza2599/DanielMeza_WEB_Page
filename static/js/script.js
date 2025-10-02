@@ -88,7 +88,7 @@ function initializeCarousel() {
         clearInterval(autoPlayInterval); // Limpiar cualquier intervalo existente
         autoPlayInterval = setInterval(() => {
         goToSlide(currentSlide + 1);
-        }, 6000);
+        }, 7000);
     }
 
     // Eventos de botones y navegación
