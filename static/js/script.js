@@ -56,6 +56,7 @@ function initializeCarousel() {
 
         // -- Inicio de la lógica felxible del carrusel --
         const numSlides = slides.length;
+        console.log(`Número de slides: ${numSlides}`); // Pruebas de depuración
 
         // 1. Hacer el contenedor lo suficientemente ancho para todos los slides
         carruselContainer.style.width = `${numSlides * 100}%`;
@@ -82,6 +83,7 @@ function initializeCarousel() {
             indicadores.forEach((ind, i) => {
                 ind.classList.toggle('activo', i === currentSlide);
             });
+            console.log(`Desplazamiento a la diapositiva: ${currentSlide}`); // Pruebas de depuración
     }
 
     function startAutoPlay() {
@@ -108,6 +110,7 @@ function initializeCarousel() {
                 startAutoPlay();
             });
         });
+        console.log('Indicador activo:', indicadores[currentSlide]); // Pruebas de depuración   
 
         // Navegación con teclado
         document.addEventListener('keydown', (e) => {
