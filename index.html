@@ -1,278 +1,375 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Daniel Meza - Electronic Engineer & Software Developer. Professional portfolio showcasing work experience, skills, and academic background.">
-    <meta name="keywords" content="software developer, electronic engineer, portfolio, frontend, backend, embedded systems, Python, JavaScript">
-    <meta name="author" content="Daniel Meza">
-    <meta name="robots" content="index, follow">
-    
+    <meta
+      name="description"
+      content="Daniel Meza - Electronic Engineer & Software Developer. Professional portfolio showcasing work experience, skills, and academic background."
+    />
+    <meta
+      name="keywords"
+      content="software developer, electronic engineer, portfolio, frontend, backend, embedded systems, Python, JavaScript"
+    />
+    <meta name="author" content="Daniel Meza" />
+    <meta name="robots" content="index, follow" />
+
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Daniel Meza - Software Developer Portfolio">
-    <meta property="og:description" content="Electronic Engineer & Software Developer. View my work experience, skills, and projects.">
-    <meta property="og:type" content="website">
-    
+    <meta
+      property="og:title"
+      content="Daniel Meza - Software Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Electronic Engineer & Software Developer. View my work experience, skills, and projects."
+    />
+    <meta property="og:type" content="website" />
+
     <title>Daniel Meza | Software Developer & Electronic Engineer</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./static/images/mezatechazullogosf.ico"/>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./static/images/mezatechazullogosf.ico"
+    />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="./static/CSS/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./static/CSS/styles.css" />
+  </head>
+  <body>
     <div class="app">
-        <!-- Header / Navigation -->
-        <header class="header">
-            <div class="header-content">
-                <a href="#" class="logo" onclick="loadSection('home')">
-                    <span class="logo-icon">DM</span>
-                    <span class="logo-text">Daniel Meza</span>
+      <!-- Header / Navigation -->
+      <header class="header">
+        <div class="header-content">
+          <a href="#" class="logo" onclick="loadSection('home')">
+            <span class="logo-icon">DM</span>
+            <span class="logo-text">Daniel Meza</span>
+          </a>
+
+          <button
+            class="menu-toggle"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger"></span>
+          </button>
+
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav-list">
+              <li>
+                <a
+                  href="#"
+                  class="nav-link active"
+                  onclick="loadSection('home')"
+                >
+                  <i class="fas fa-home"></i><span>Home</span>
                 </a>
-                
-                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-                    <span class="hamburger"></span>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link"
+                  onclick="loadSection('work_experience')"
+                >
+                  <i class="fas fa-briefcase"></i><span>Experience</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link"
+                  onclick="loadSection('academic_information')"
+                >
+                  <i class="fas fa-graduation-cap"></i><span>Education</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link" onclick="loadSection('skills')">
+                  <i class="fas fa-code"></i><span>Skills</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main Layout -->
+      <div class="main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <div class="sidebar-inner">
+            <!-- Profile Card -->
+            <div class="profile-card">
+              <div class="profile-image-container">
+                <img
+                  src="./static/images/Gemini_Daniel_Profile_cut.png"
+                  alt="Daniel Meza Profile"
+                  class="profile-image"
+                  loading="lazy"
+                />
+                <div class="profile-status">
+                  <span class="status-dot"></span>
+                  <span class="status-text">Available</span>
+                </div>
+              </div>
+
+              <h2 class="profile-name">Daniel Meza</h2>
+              <p class="profile-title">
+                Electronic Engineer | Software Developer
+              </p>
+            </div>
+
+            <!-- Contact Info Card -->
+            <div class="info-card">
+              <h3 class="card-title"><i class="fas fa-id-card"></i> Contact</h3>
+              <ul class="contact-list">
+                <li>
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Guanajuato, México</span>
+                </li>
+                <li>
+                  <i class="fas fa-phone"></i>
+                  <a href="tel:+524772902986">+52 477 290 2986</a>
+                </li>
+                <li>
+                  <i class="fas fa-envelope"></i>
+                  <a href="mailto:daniel.meza2599@outlook.com"
+                    >daniel.meza2599@outlook.com</a
+                  >
+                </li>
+              </ul>
+
+              <a
+                href="./static/pdf_files/CV_RossembertDanielMezaRamirez_SWDev_ENG.pdf"
+                download
+                class="btn btn-primary btn-download"
+              >
+                <i class="fas fa-download"></i>
+                <span>Download CV</span>
+              </a>
+            </div>
+
+            <!-- Professional Profile Card -->
+            <div class="info-card">
+              <h3 class="card-title">
+                <i class="fas fa-user-tie"></i> Professional Profile
+              </h3>
+              <p class="profile-text">
+                Electronic Engineer with software development experience.
+                Seeking to apply technical skills in a Frontend/Backend
+                development role to contribute to innovative projects.
+                Passionate about continuous learning and professional growth.
+              </p>
+            </div>
+
+            <!-- Languages Card -->
+            <div class="info-card">
+              <h3 class="card-title">
+                <i class="fas fa-language"></i> Languages
+              </h3>
+              <ul class="languages-list">
+                <li>
+                  <span class="lang-name">Spanish</span>
+                  <span class="lang-level">Native</span>
+                </li>
+                <li>
+                  <span class="lang-name">English</span>
+                  <span class="lang-level">Intermediate</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/rossembert-daniel-meza-ramirez-a5660622b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link linkedin"
+                aria-label="LinkedIn Profile"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/Danielmeza2599"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link github"
+                aria-label="GitHub Profile"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/r.daniel_meza.r/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link instagram"
+                aria-label="Instagram Profile"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content">
+          <div id="main-content" class="content-wrapper">
+            <!-- Carousel Section -->
+            <section class="carousel-section">
+              <div class="carousel">
+                <div class="carousel-track">
+                  <div class="carousel-slide active">
+                    <img
+                      src="./static/images/first.jpg"
+                      alt="Welcome to My Professional Page"
+                      loading="eager"
+                    />
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                      <h2>Welcome to My Portfolio</h2>
+                      <p>
+                        Explore my work experience, academic background, and
+                        skills
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="./static/images/CeremoniaTitulacion_DanielMeza.jpeg"
+                      alt="Graduation Ceremony"
+                      loading="lazy"
+                    />
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                      <h2>Electronic Engineering</h2>
+                      <p>Universidad de la Salle Bajío</p>
+                    </div>
+                  </div>
+                  <div class="carousel-slide">
+                    <video
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      poster="./static/images/Gemini_Daniel_Profile_cut.png"
+                      preload="metadata"
+                    >
+                      <source
+                        src="./static/images/Creación_de_Video_de_Bienvenida_YouTube.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                      <h2>Daniel Meza</h2>
+                      <p>Software Developer</p>
+                    </div>
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="./static/images/LogoMeza.png"
+                      alt="Meza Technology"
+                      loading="lazy"
+                    />
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                      <h2>MEZA</h2>
+                      <p>TECHNOLOGY</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-btn prev" aria-label="Previous slide">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next" aria-label="Next slide">
+                  <i class="fas fa-chevron-right"></i>
                 </button>
 
-                <nav class="nav" aria-label="Main navigation">
-                    <ul class="nav-list">
-                        <li><a href="#" class="nav-link active" onclick="loadSection('home')">
-                            <i class="fas fa-home"></i><span>Home</span>
-                        </a></li>
-                        <li><a href="#" class="nav-link" onclick="loadSection('work_experience')">
-                            <i class="fas fa-briefcase"></i><span>Experience</span>
-                        </a></li>
-                        <li><a href="#" class="nav-link" onclick="loadSection('academic_information')">
-                            <i class="fas fa-graduation-cap"></i><span>Education</span>
-                        </a></li>
-                        <li><a href="#" class="nav-link" onclick="loadSection('skills')">
-                            <i class="fas fa-code"></i><span>Skills</span>
-                        </a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <!-- Main Layout -->
-        <div class="main-layout">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="sidebar-inner">
-                    <!-- Profile Card -->
-                    <div class="profile-card">
-                        <div class="profile-image-container">
-                            <img src="./static/images/Gemini_Daniel_Profile_cut.png" 
-                                 alt="Daniel Meza Profile" 
-                                 class="profile-image"
-                                 loading="lazy">
-                            <div class="profile-status">
-                                <span class="status-dot"></span>
-                                <span class="status-text">Available</span>
-                            </div>
-                        </div>
-                        
-                        <h2 class="profile-name">Daniel Meza</h2>
-                        <p class="profile-title">Electronic Engineer | Software Developer</p>
-                    </div>
-
-                    <!-- Contact Info Card -->
-                    <div class="info-card">
-                        <h3 class="card-title">
-                            <i class="fas fa-id-card"></i> Contact
-                        </h3>
-                        <ul class="contact-list">
-                            <li>
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Guanajuato, México</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:+524772902986">+52 477 290 2986</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:daniel.meza2599@outlook.com">daniel.meza2599@outlook.com</a>
-                            </li>
-                        </ul>
-                        
-                        <a href="./static/pdf_files/CV_RossembertDanielMezaRamirez_SWDev_ENG.pdf" 
-                           download 
-                           class="btn btn-primary btn-download">
-                            <i class="fas fa-download"></i>
-                            <span>Download CV</span>
-                        </a>
-                    </div>
-
-                    <!-- Professional Profile Card -->
-                    <div class="info-card">
-                        <h3 class="card-title">
-                            <i class="fas fa-user-tie"></i> Professional Profile
-                        </h3>
-                        <p class="profile-text">
-                            Electronic Engineer with software development experience. Seeking to apply technical skills in a Frontend/Backend development role to contribute to innovative projects. Passionate about continuous learning and professional growth.
-                        </p>
-                    </div>
-
-                    <!-- Languages Card -->
-                    <div class="info-card">
-                        <h3 class="card-title">
-                            <i class="fas fa-language"></i> Languages
-                        </h3>
-                        <ul class="languages-list">
-                            <li>
-                                <span class="lang-name">Spanish</span>
-                                <span class="lang-level">Native</span>
-                            </li>
-                            <li>
-                                <span class="lang-name">English</span>
-                                <span class="lang-level">Intermediate</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Social Links -->
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/rossembert-daniel-meza-ramirez-a5660622b/" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           class="social-link linkedin"
-                           aria-label="LinkedIn Profile">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/Danielmeza2599" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           class="social-link github"
-                           aria-label="GitHub Profile">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/r.daniel_meza.r/" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           class="social-link instagram"
-                           aria-label="Instagram Profile">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                  <button
+                    class="indicator active"
+                    data-index="0"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    class="indicator"
+                    data-index="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    class="indicator"
+                    data-index="2"
+                    aria-label="Slide 3"
+                  ></button>
+                  <button
+                    class="indicator"
+                    data-index="3"
+                    aria-label="Slide 4"
+                  ></button>
                 </div>
-            </aside>
+              </div>
+            </section>
 
-            <!-- Main Content Area -->
-            <main class="content">
-                <div id="main-content" class="content-wrapper">
-                    <!-- Carousel Section -->
-                    <section class="carousel-section">
-                        <div class="carousel">
-                            <div class="carousel-track">
-                                <div class="carousel-slide active">
-                                    <img src="./static/images/first.jpg" 
-                                         alt="Welcome to My Professional Page" 
-                                         loading="eager">
-                                    <div class="slide-overlay"></div>
-                                    <div class="slide-content">
-                                        <h2>Welcome to My Portfolio</h2>
-                                        <p>Explore my work experience, academic background, and skills</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="./static/images/CeremoniaTitulacion_DanielMeza.jpeg" 
-                                         alt="Graduation Ceremony" 
-                                         loading="lazy">
-                                    <div class="slide-overlay"></div>
-                                    <div class="slide-content">
-                                        <h2>Electronic Engineering</h2>
-                                        <p>Universidad de la Salle Bajío</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-slide">
-                                    <video autoplay muted loop playsinline 
-                                           poster="./static/images/Gemini_Daniel_Profile_cut.png"
-                                           preload="metadata">
-                                        <source src="./static/images/Creación_de_Video_de_Bienvenida_YouTube.mp4" type="video/mp4">
-                                    </video>
-                                    <div class="slide-overlay"></div>
-                                    <div class="slide-content">
-                                        <h2>Daniel Meza</h2>
-                                        <p>Software Developer</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="./static/images/LogoMeza.png" 
-                                         alt="Meza Technology" 
-                                         loading="lazy">
-                                    <div class="slide-overlay"></div>
-                                    <div class="slide-content">
-                                        <h2>MEZA</h2>
-                                        <p>TECHNOLOGY</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Carousel Controls -->
-                            <button class="carousel-btn prev" aria-label="Previous slide">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-btn next" aria-label="Next slide">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            
-                            <!-- Carousel Indicators -->
-                            <div class="carousel-indicators">
-                                <button class="indicator active" data-index="0" aria-label="Slide 1"></button>
-                                <button class="indicator" data-index="1" aria-label="Slide 2"></button>
-                                <button class="indicator" data-index="2" aria-label="Slide 3"></button>
-                                <button class="indicator" data-index="3" aria-label="Slide 4"></button>
-                            </div>
-                        </div>
-                    </section>
+            <!-- Quick Stats -->
+            <section class="quick-stats">
+              <div class="stat-card">
+                <i class="fas fa-briefcase"></i>
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="stat-card">
+                <i class="fas fa-project-diagram"></i>
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat-card">
+                <i class="fas fa-award"></i>
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Certifications</div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
 
-                    <!-- Quick Stats -->
-                    <section class="quick-stats">
-                        <div class="stat-card">
-                            <i class="fas fa-briefcase"></i>
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fas fa-project-diagram"></i>
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Projects</div>
-                        </div>
-                        <div class="stat-card">
-                            <i class="fas fa-award"></i>
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Certifications</div>
-                        </div>
-                    </section>
-                </div>
-            </main>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <p class="copyright">&copy; 2025 Daniel Meza. All rights reserved.</p>
+          <nav class="footer-nav">
+            <a href="/static/pages/PrivacePolitics.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="/static/pages/Terms_Of_Service.html">Terms of Service</a>
+          </nav>
         </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <p class="copyright">&copy; 2025 Daniel Meza. All rights reserved.</p>
-                <nav class="footer-nav">
-                    <a href="/static/pages/PrivacePolitics.html">Privacy Policy</a>
-                    <span class="separator">|</span>
-                    <a href="/static/pages/Terms_Of_Service.html">Terms of Service</a>
-                </nav>
-            </div>
-        </footer>
+      </footer>
     </div>
 
     <!-- Scripts -->
     <script src="./static/js/script.js"></script>
-</body>
+  </body>
 </html>
