@@ -1022,20 +1022,33 @@ button {
 }
 
 .project-preview {
-    height: 200px;
+    height: 220px;
     width: 100%;
     overflow: hidden;
     position: relative;
+    background: var(--bg-secondary);
 }
 
-.preview-placeholder {
+.project-img {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 3.5rem;
+    object-fit: cover;
+    object-position: top;
+    transition: transform var(--transition-slow);
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+    pointer-events: none;
 }
 
 .project-info {
