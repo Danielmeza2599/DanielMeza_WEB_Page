@@ -225,6 +225,9 @@
         let file = '';
 
         switch(section) {
+            case 'projects':
+                file = './static/pages/projects.html';
+                break;
             case 'work_experience':
                 file = './static/pages/work_experience.html';
                 break;
